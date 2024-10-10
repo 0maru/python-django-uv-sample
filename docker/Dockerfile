@@ -1,4 +1,4 @@
-ARG PYTHON_VERSION="3.12.6"
+ARG PYTHON_VERSION="3.10.9"
 
 # Astral社が提供しているPythonイメージをベースにする
 FROM ghcr.io/astral-sh/uv:python${PYTHON_VERSION%.*}-bookworm-slim as build
@@ -17,7 +17,6 @@ RUN --mount=type=cache,target=/root/.cache \
     cd /app && \
     uv sync --frozen --no-install-project
 
-COPY hello.py /app
 
 FROM python:${PYTHON_VERSION}-slim-bookworm
 
