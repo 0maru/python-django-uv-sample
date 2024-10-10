@@ -1,7 +1,8 @@
-// Info https://containers.dev/implementors/json_reference/
 {
-  //	name of the dev container
   "name": "python-django-uv-devcontainer",
-  //	Or use a Dockerfile here, more info: https://containers.dev/guide/dockerfile
-  "image": "openjdk:11"
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "postCreateCommand": "uv sync"
 }
