@@ -1,0 +1,8 @@
+{
+  "name": "python-django-uv-devcontainer",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "postCreateCommand": "uv sync"
+}
