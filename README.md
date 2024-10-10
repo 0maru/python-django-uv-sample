@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 # Django でWebアプリケーションを作る with uv / ruff
 
 ## uv のインストール
@@ -85,3 +87,13 @@ django-admin startproject app
 ```shell
 uv run python app/manage.py runserver
 ```
+
+## Dockerファイルの作成
+
+Python のバージョンはpyproject.tomlにかかれています。
+
+```dockerfile
+FROM python:3.12-bullseye
+```
+
+## DevContainer で起動する
